@@ -14,6 +14,27 @@ export default function Header() {
           </Link>
         </div>
       </div>
+      <div className={css.navContainer}>
+        <nav aria-label="Main Navigation" className={css.navigationList}>
+          <ul className={css.navigation}>
+            <li className={css.navigationItem}>
+              <Link href="/" className={css.navigationLink}>
+                {/* {t('home')} */}
+              </Link>
+            </li>
+            <li className={css.navigationItem}>
+              <Link href="/products" className={css.navigationLink}>
+                {/* {t('goods')} */}
+              </Link>
+            </li>
+            <li className={css.navigationItem}>
+              <Link href="/categories" className={css.navigationLink}>
+                {/* {t('categories')} */}
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
