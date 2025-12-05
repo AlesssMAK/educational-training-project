@@ -2,7 +2,9 @@
 import { useTranslations } from "next-intl";
 import css from "./Header.module.css";
 import Link from "next/link";
+
 export default function Header() {
+  const t = useTranslations("Header");
   return (
     <header className={css.section}>
       <div className="container">
@@ -19,17 +21,17 @@ export default function Header() {
           <ul className={css.navigation}>
             <li className={css.navigationItem}>
               <Link href="/" className={css.navigationLink}>
-                {/* {t('home')} */}
+                {t("home")}
               </Link>
             </li>
             <li className={css.navigationItem}>
               <Link href="/products" className={css.navigationLink}>
-                {/* {t('goods')} */}
+                {t("goods")}
               </Link>
             </li>
             <li className={css.navigationItem}>
               <Link href="/categories" className={css.navigationLink}>
-                {/* {t('categories')} */}
+                {t("categories")}
               </Link>
             </li>
           </ul>

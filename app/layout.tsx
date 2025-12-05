@@ -1,3 +1,4 @@
+import { NextIntlClientProvider } from "next-intl";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 
@@ -9,9 +10,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
-        {/* <Footer /> */}
+        <NextIntlClientProvider>
+          <Header />
+
+          <main>{children}</main>
+          {/* <Footer /> */}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
